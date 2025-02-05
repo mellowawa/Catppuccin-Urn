@@ -15,7 +15,6 @@ if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
   echo "│            --all: installs every theme (set theme before running Urn)   │"
   echo "├─────────────────────────────────────────────────────────────────────────┤"
   echo "│            --set: set Urn's theme from already installed themes         │"
-  echo "│         --update: update the repo and choose what themes to reinstall   │"
   echo "├─────────────────────────────────────────────────────────────────────────┤"
   echo "│      --help | -h: displays this help dialog than exits                  │"
   echo "╰─────────────────────────────────────────────────────────────────────────╯"
