@@ -21,6 +21,22 @@ if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
   exit
 fi
 
+validThemes=("mocha" "mocha-wr" "macchiato" "macchiato-wr" "frappe" "frappe-wr" "latte" "latte-wr")
+
+if [ "$1" == "--set" ]; then
+  ls /usr/local/share/urn/themes | while IFS= read -r line; do echo -e "\033[1;34m$line\033[0m"; done
+  read -p "Which Theme do you want to use? " selectTheme
+
+  if [[ ! " ${validThemes[@]} " =~ " ${selectTheme} " ]]; then
+    echo "Invalid theme selected. Exiting....."
+    exit 1
+  else
+    gsettings set wildmouse.urn theme $selectTheme
+    echo "Set theme to: $selectTheme"
+    exit 0
+  fi
+fi
+
 if [ "$1" == "--mocha" ]; then
   theme="mocha"
 elif [ "$1" == "--mocha-wr" ]; then
@@ -74,8 +90,6 @@ if [ "$1" == "--all" ]; then
 
   read -p "Which Theme do you want to use? " selectTheme
 
-  validThemes=("mocha" "mocha-wr" "macchiato" "macchiato-wr" "frappe" "frappe-wr" "latte" "latte-wr")
-
   if [[ ! " ${validThemes[@]} " =~ " ${selectTheme} " ]]; then
     echo "Invalid theme selected. Exiting....."
     exit 1
@@ -93,21 +107,6 @@ else
 fi
 
 
-if [ "$2" == "--set" ]; then
-  ls /usr/local/share/urn/themes | while IFS= read -r line; do echo -e "\033[1;34m$line\033[0m"; done
-  read -p "Which Theme do you want to use? " selectTheme
-
-  if [[ ! " ${validThemes[@]} " =~ " ${selectTheme} " ]]; then
-    echo "Invalid theme selected. Exiting....."
-    exit 1
-  else
-    gsettings set wildmouse.urn theme $selectTheme
-    echo "Set theme to: $selectTheme"
-    echo ""
-    echo "You can change the theme by running: gsettings set wildmouse.urn theme <theme>"
-    exit 0
-  fi
-fi
 
 
 
