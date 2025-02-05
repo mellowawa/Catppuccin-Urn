@@ -6,20 +6,25 @@
 
 ---
 ## Installation
-- Clone Git repo
+- **Clone Git repo**
 ```
 git clone https://gitlab.com/AsahiNyan/Catppuccin-Urn-Gtk
 cd Catppuccin-Urn-Gtk
 ```
-- Make install script executable
+
+- **Make install script executable**
 ```
 chmod +x install.sh
 ```
-- Clean Urn default CSS
+
+- **Clean Urn default CSS**
+cleaning the CSS means to remove all contents from the default `urn-gtk.css` theme in Urn's source code and recompile the app. The step is **Mandatory** for the themes to display properly.
+You can either do this manually or by using the `--clean-css` argument with the install script.
 ```
 ./install.sh --clean-css
 ```
-- Install theme/s (`-h` for help)
+
+- **Install theme/s (`-h` for help)**
 ```
 ./install.sh --[variant/all]
 ```
