@@ -4,3 +4,22 @@
 |---------|---------|---------|---------|
 | ![](assets/mocha.png) | ![](assets/macchiato.png) | ![](assets/frappe.png) | ![](assets/latte.png) |
 
+---
+## Installation
+- Clone Git repo
+```
+git clone https://gitlab.com/AsahiNyan/Catppuccin-Urn-Gtk
+cd Catppuccin-Urn-Gtk
+```
+- Make install script executable
+```
+chmod +x install.sh
+```
+- Run install script (`-h` for help)
+```
+./install.sh --[variant/all]
+```
+
+---
+### Note
+This is **NOT** a official Catppuccin theme, and is simply a thing i enjoyed making.
