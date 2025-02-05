@@ -15,7 +15,11 @@ cd Catppuccin-Urn-Gtk
 ```
 chmod +x install.sh
 ```
-- Run install script (`-h` for help)
+- Clean Urn default CSS
+```
+./install.sh --clean-css
+```
+- Install theme/s (`-h` for help)
 ```
 ./install.sh --[variant/all]
 ```
