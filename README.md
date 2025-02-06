@@ -29,6 +29,9 @@ You can either do this manually or by using the `--clean-css` argument with the 
 ./install.sh --[variant/all]
 ```
 
+## -wr?
+Each theme has a normal variant and a WR variant. The WR variants only diffrence is that it will display the WR element if its specified in the split file, however if this is not specified using a WR variant will lead to potentionally having a undesired look. If you use the normal variant with a theme that has the WR element specified it will simply not display and behave as usual.
+
 ---
 ### Note
 This is **NOT** a official Catppuccin theme, and is simply a thing i enjoyed making.
