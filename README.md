@@ -6,6 +6,7 @@
 
 ---
 ## Installation
+For a GUI installation you can use [urn-settings](https://github.com/mellowawa/urn-settings)
 - **Clone Git repo**
 ```
 git clone https://gitlab.com/AsahiNyan/Catppuccin-Urn-Gtk
